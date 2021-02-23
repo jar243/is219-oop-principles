@@ -1,4 +1,8 @@
 # IS219 OOP Principles
+
+[![Build Status](https://travis-ci.com/jar243/is219-oop-principles.svg?branch=main)](https://travis-ci.com/jar243/is219-oop-principles) 
+[![Coverage Status](https://coveralls.io/repos/github/jar243/is219-oop-principles/badge.svg?branch=main)](https://coveralls.io/github/jar243/is219-oop-principles?branch=main)
+
 Object-oriented programming is an abstract method of programming that encapsulates code within an object. An object can have traits, perform actions, and have child objects that inherit its traits. This in many ways models our real-world way of thinking when it comes to objects.
 
 While not originally developed to be an object-oriented language, as Javascript has grown in popularity the past decade it has implemented many common OOP features seen in other languages.
