@@ -8,6 +8,10 @@ class Mammal {
 
 class Human extends Mammal {
 
+  constructor() {
+    super()
+  }
+
   canSpeak() {
     return true
   }
