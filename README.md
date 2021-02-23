@@ -19,6 +19,8 @@ Abstraction provides a way for an object to make some of its methods or variable
 
 ## 3) Inheritance
 
+Inheritance is a way of having a broader, multi-use class be used as a starting point for a more specific class, thus 'inheriting' the parent class's variables and methods. This allows developers to cut down on duplicate code that might be used by multiple classes of similiar type. In Javascript this is implemented using the 'extends' keyword in the class declaration. In my example, I create a Mammal class with the method 'isAlive' and a Human class that extends Mammal with the method 'canSpeak.' Human possesses both methods, inheriting isAlive from Mammal.
+
 ## 4) Polymorphisms
 
 Polymorphisms allow a developer to make a blueprint for a class. Classes that use this blueprint may have extrememly different internal workings, but still use the same public methods, allowing them to be used interchangeably by outside code.
