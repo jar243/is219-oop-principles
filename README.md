@@ -23,4 +23,4 @@ Inheritance is a way of having a broader, multi-use class be used as a starting 
 
 ## 4) Polymorphisms
 
-Polymorphisms allow a developer to make a blueprint for a class. Classes that use this blueprint may have extrememly different internal workings, but still use the same public methods, allowing them to be used interchangeably by outside code.
+Polymorphisms allow a developer to make a blueprint for a class. Classes that use this blueprint may have extrememly different internal workings, but still use the same public methods, allowing them to be used interchangeably by outside code. Javascript doesn't have a strict enforcer of the creation of a 'blueprint' like a Java interface, but the concept can be applied the same. 
