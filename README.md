@@ -33,9 +33,57 @@ When programming using object-oriented techniques, similiar problems often call 
 
 A composite allows for any number of objects to be nested inside another parent object, creating an almost tree-like structure. The parent object, although containing potentially hundreds of layers of child objects, can still be used as though it were a single object. This is especially helpful in our calculator app, as oftentimes more than one calculation is being performed at once. Using PEMDAS and a Calculation Class that takes advantage of the composite design pattern, one can encapsulate a very long, multi operational math equation into a single, easy to understand tree of individual calculations.
 
+```js
+class CompositeCalculation {
+
+  constructor(dividend, divisor) {
+    this.dividend = dividend;
+    this.divisor = divisor;
+  }
+
+  getResult() {
+    let dividendVal = (this.dividend instanceof CompositeCalculation) ? this.dividend.getResult() : this.dividend;
+    let divisorVal = (this.divisor instanceof CompositeCalculation) ? this.divisor.getResult() : this.divisor;
+    return dividendVal / divisorVal;
+  }
+
+}
+```
+
 ## Creational: Builder
 
 The composite design mentioned above, although a sound architecture for handling equations of any length, does not take into account its own creation. Some additional code will be needed to take a user's equation, parse it, and create the composite Calculation. This is where the builder design pattern could be useful. The CalculationBuilder class would accept an equation string in its whole format, seperate the equation into its individual Calculations, then nest them into a composite Calculation object using PEMDAS.
+
+```js
+class CalculationBuilder {
+
+  constructor() {
+
+  }
+
+  build(equationStr) {
+    let args = equationStr.replace(' ', '').split('/')
+    let stack = []
+    
+    for (let i in args) {
+      let arg = args[i]
+      if (stack.length < 2) {
+        stack.push(arg)
+      }
+      if (stack.length === 1) {
+        continue
+      }
+      let divisor = stack.pop()
+      let dividend = stack.pop()
+      let calc = new CompositeCalculation(dividend, divisor)
+      stack.push(calc)
+    }
+
+    return stack[0]
+  }
+
+}
+```
 
 ## Behavioral: Memento
 
