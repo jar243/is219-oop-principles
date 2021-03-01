@@ -1,4 +1,4 @@
-const Passport = require('../src/abstraction');
+const Passport = require('../principles/abstraction');
 const dob = '1/1/2000';
 const ssn = '123456';
 const inst = new Passport(dob, ssn);

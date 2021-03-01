@@ -1,4 +1,4 @@
-const classes = require('../src/polymorphisms');
+const classes = require('../principles/polymorphisms');
 
 test('Polymorphism Class Vehicle returns null on get function', () => {
   let v = new classes.Vehicle()

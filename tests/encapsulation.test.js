@@ -1,4 +1,4 @@
-const Person = require('../src/encapsulation');
+const Person = require('../principles/encapsulation');
 const name = 'John';
 
 test('Can use class methods to access data about an object', () => {

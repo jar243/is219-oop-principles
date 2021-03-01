@@ -1,4 +1,4 @@
-const classes = require('../src/inheritance');
+const classes = require('../principles/inheritance');
 const mammal = new classes.Human();
 const human = new classes.Human();
 
