@@ -23,4 +23,20 @@ Inheritance is a way of having a broader, multi-use class be used as a starting 
 
 ## 4) Polymorphisms
 
-Polymorphisms allow a developer to make a blueprint for a class. Classes that use this blueprint may have extrememly different internal workings, but still use the same public methods, allowing them to be used interchangeably by outside code. Javascript doesn't have a strict enforcer of the creation of a 'blueprint' like a Java interface, but the concept can be applied the same. 
+Polymorphisms allow a developer to make a blueprint for a class. Classes that use this blueprint may have extrememly different internal workings, but still use the same public methods, allowing them to be used interchangeably by outside code. Javascript doesn't have a strict enforcer of the creation of a 'blueprint' like a Java interface, but the concept can be applied the same.
+
+# OOP Design Patterns
+
+When programming using object-oriented techniques, similiar problems often call for similiar solutions. Developers who have worked with OO languages for the past couple decades have put names to these common solutions to make it easier to communicate ideas and code structure. Below are three examples of design patterns and how they're applied.
+
+## Structural: Composite
+
+A composite allows for any number of objects to be nested inside another parent object, creating an almost tree-like structure. The parent object, although containing potentially hundreds of layers of child objects, can still be used as though it were a single object. This is especially helpful in our calculator app, as oftentimes more than one calculation is being performed at once. Using PEMDAS and a Calculation Class that takes advantage of the composite design pattern, one can encapsulate a very long, multi operational math equation into a single, easy to understand tree of individual calculations.
+
+## Creational: Builder
+
+The composite design mentioned above, although a sound architecture for handling equations of any length, does not take into account its own creation. Some additional code will be needed to take a user's equation, parse it, and create the composite Calculation. This is where the builder design pattern could be useful. The CalculationBuilder class would accept an equation string in its whole format, seperate the equation into its individual Calculations, then nest them into a composite Calculation object using PEMDAS.
+
+## Behavioral: Memento
+
+A memento class, in combination with a caretaker, provides a method for your app to keep a historical record of its previous states and to return to an older/newer state as needed by the user. In the case of the calculator app, a very simple CalculationMemento class could be used to keep a record of previous calculations performed by the user and to retrieve them as needed.
